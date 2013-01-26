@@ -1,3 +1,9 @@
+/*
+	Copywrite Square Bracket LLC - Sean Clark 2012-3012
+	http://square-bracket.com 	
+	http://connect.ai	
+	http://youtube.com/optikalefxx
+*/
 (function($) {
 	$.fn.autofill = function(opts) {
 		return this.each(function() {
