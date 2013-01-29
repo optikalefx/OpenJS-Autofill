@@ -11,7 +11,6 @@
 				usingTags = $(this).parent().hasClass("tags-wrapper");
 			
 			if(!opts) opts = {};
-			
 			// if were combined with tagging
 			if(usingTags) {
 				self = $(this).parent().find("li input");
@@ -21,7 +20,8 @@
 			$(self).css({
 				"background":"transparent",
 				"position":"absolute",
-				"z-index":2
+				"z-index":2,
+				"outline":"none"
 			});
 			
 			// create the div wrapper
@@ -32,9 +32,14 @@
 			$wrapper = $(self).parent();
 			// make the bg input
 			var color = opts.color || "rgba(214,215,220,1)";
+			var top = opts.top || -4;
 			var $bg = $("<input type='text' class='autofill-bg' disabled/>").css({
-				"color":color
+				"color":color,
+				"top": top,
+				"outline":"none"
 			});
+			
+			
 			
 			// set data
 			$bg.data("data",opts.data);
@@ -78,6 +83,7 @@
 					}
 				});
 			}
+	
 		});
 	}
 })(jQuery);
